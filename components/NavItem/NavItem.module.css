@@ -1,0 +1,19 @@
+.link {
+  font-weight: 600;
+  font-size: 16px;
+  line-height: 19px;
+}
+
+.link:hover {
+  color: var(--primary);
+  background-color: var(--gray-light);
+}
+
+.arrow {
+  display: inline-block;
+  margin-left: 10px;
+}
+
+.link:hover svg {
+  fill: var(--primary);
+}

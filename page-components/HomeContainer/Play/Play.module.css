@@ -1,0 +1,13 @@
+.play {
+  font-family: var(--ff);
+  color: var(--black);
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 22px;
+  cursor: pointer;
+  text-decoration-line: underline;
+}
+
+.playIcon {
+  margin-right: 10px;
+}

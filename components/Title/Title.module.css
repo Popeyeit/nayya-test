@@ -1,0 +1,40 @@
+@keyframes slideOutUp {
+  from {
+    transform: translate3d(0, 0, 0);
+
+    visibility: visible;
+  }
+
+  70% {
+    transform: translate3d(0, 0, 0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translate3d(0, -50px, 0);
+    opacity: 0;
+    visibility: hidden;
+  }
+}
+
+.title {
+  font-family: var(--ff);
+  font-weight: 600;
+  font-size: 48px;
+  line-height: 58px;
+  color: var(--primary);
+  margin-bottom: 24px;
+  animation: slideOutUp 2s linear;
+}
+
+.additional {
+  font-weight: 800;
+}
+
+.control {
+  color: #6d7f9d;
+}
+
+.confidence {
+  color: #4f7d7d;
+}
