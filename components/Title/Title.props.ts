@@ -7,4 +7,5 @@ export interface TitleProps
   > {
     children: ReactNode;
     additional?: string;
+    steps?:string | number 
 }

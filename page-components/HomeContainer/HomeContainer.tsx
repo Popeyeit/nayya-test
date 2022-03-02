@@ -1,4 +1,4 @@
-import React,{useState,useEffect} from 'react';
+import React, { useState, useEffect } from 'react';
 import Image from 'next/image'
 import { HomeContainerProps, } from './HomeContainer.props';
 import Title from '../../components/Title/Title'
@@ -9,32 +9,35 @@ import imgSrc from '../../assets/person.png'
 import StarIcon from '../../assets/star.svg'
 import styles from './HomeContainer.module.css';
 
+
 function HomeContainer({
 }: HomeContainerProps): JSX.Element {
-  const [showTitle, setShowTitle] = useState(0)
-  useEffect(() => {
-    const interval = setInterval(() => {
-    
-      setShowTitle((prev) => {
-        if (prev === 2) {
-          return 0
-        } else {
-          return prev+=1
-        }
-        })
+  const [showTitle, setShowTitle] = useState(false)
 
+  useEffect(() => {
+
+
+    setTimeout(() => {
+
+      setShowTitle(true)
+      
     }, 2000);
-    
-    return ()=>clearInterval(interval)
+
+
   },[])
   return (
     <div className={styles.wrapper}>
       
       <div className={styles.leftSectionWrapper}>
-        {showTitle===0&&<Title >Welcome to Nayya</Title>}
-        {showTitle===1&&<Title additional='Control'>Giving Consumers 
+        {!showTitle  && <Title >Welcome to Nayya</Title>}
+        
+        {showTitle && <Title additional='Control' >Giving Consumers
+           
 </Title>}
-        {showTitle===2&&<Title additional='Confidence'>Giving Consumers </Title>}
+
+
+        
+
         
         <Paragraph>
           We’re approaching the incoherent moments of benefits selection and utilization by harnessing the world’s data. Welcome to the benefit experience your employees deserve.
