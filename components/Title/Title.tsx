@@ -1,6 +1,5 @@
 
 import React,{useEffect,useState} from 'react';
-import Typical from 'react-typical'
 import cn from 'classnames'
 import { TitleProps } from './Title.props';
 import styles from './Title.module.css';
@@ -28,7 +27,7 @@ let interval
         return prev+=1
         }
     })
-  }, 2000);
+  }, 3000);
 
   return () => clearInterval(interval);
 
@@ -37,21 +36,14 @@ let interval
     },[additional])
 
   return (
-    <h1 className={styles.title}>
+    <h1 className={cn(styles.title, {
+        [styles.welcome]: additional === 'Welcome',
+        [styles.stayControl]: additional === 'Control',
+              })}>
           {children}
-          {additional && counter ===0 &&
-    //           <Typical
-    //               steps={steps}
-    //               loop={Infinity}
-    //               wrapper="span"
-    //               className={cn(styles.additional, {
-    //     [styles.control]: additional === 'Control' && counter === 0,
-    //     [styles.confidence]: additional === 'Control' && counter === 1,
-    //     [styles.understanding]: additional === 'Control' && counter === 2,
-    //     [styles.peace]: additional === 'Control' && counter === 3,
 
-    //   })}
-    //           />
+          {additional=== 'Control' && counter ===0 &&
+
               <span className={cn(styles.additional, {
        [styles.control]: additional === 'Control',
               })}>

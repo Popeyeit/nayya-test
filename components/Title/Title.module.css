@@ -8,6 +8,40 @@
   display: block;
 }
 
+@keyframes slideOutUp {
+  from {
+    transform: translateY(20px);
+    opacity: 0.2;
+  }
+
+  25% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  55% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+
+  to {
+    transform: translateY(-20px);
+    opacity: 0.2;
+  }
+}
+
+@keyframes staySlide {
+  from {
+    transform: translateY(20px);
+    opacity: 0.2;
+  }
+
+  25% {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
 @keyframes changeColor {
   from {
     color: #6d7f9d;
@@ -29,50 +63,50 @@
   }
 }
 
-@keyframes changeWord {
+@keyframes welcomeAnimate {
   from {
-    /* opacity: 0.2; */
-    width: 0;
+    transform: translateY(0);
+    opacity: 1;
   }
-
+  60% {
+    transform: translateY(0);
+    opacity: 1;
+  }
   to {
-    /* opacity: 1; */
-    width: 100%;
+    transform: translateY(-20px);
+    opacity: 0.2;
   }
 }
 
+.welcome {
+  animation: welcomeAnimate 3s linear;
+}
+.stayControl {
+  animation: staySlide 3s linear;
+}
+
 .additional {
+  animation: slideOutUp 3s linear;
   display: block;
   font-weight: 800;
 }
 
 .control {
-  overflow: hidden;
-  white-space: nowrap;
-  animation: changeWord 2s linear;
+  animation: slideOutUp 3s linear;
   color: #6d7f9d;
 }
 
 .confidence {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  animation: changeWord 2s linear;
+  animation: slideOutUp 3s linear;
   color: #4f7d7d;
 }
 
 .understanding {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  animation: changeWord 2s linear;
+  animation: slideOutUp 3s linear;
   color: #4d69cf;
 }
 
 .peace {
-  overflow: hidden;
-  white-space: nowrap;
-  width: 0;
-  animation: changeWord 2s linear;
+  animation: slideOutUp 3s linear;
   color: #b76e79;
 }

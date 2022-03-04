@@ -5,7 +5,7 @@ import Title from '../../components/Title/Title'
 import Paragraph from '../../components/Paragraph/Paragraph'
 import SubscribeForm from '../../components/SubscribeForm/SubscribeForm';
 import Play from './Play/Play'
-import imgSrc from '../../assets/person.png'
+import imgSrc from '../../assets/person.jpeg'
 import StarIcon from '../../assets/star.svg'
 import styles from './HomeContainer.module.css';
 
@@ -21,7 +21,7 @@ function HomeContainer({
 
       setShowTitle(true)
       
-    }, 2000);
+    }, 3000);
 
 
   },[])
@@ -29,7 +29,7 @@ function HomeContainer({
     <div className={styles.wrapper}>
       
       <div className={styles.leftSectionWrapper}>
-        {!showTitle  && <Title >Welcome to Nayya</Title>}
+        {!showTitle  && <Title additional='Welcome'>Welcome to Nayya</Title>}
         
         {showTitle && <Title additional='Control' >Giving Consumers
            
@@ -50,7 +50,7 @@ function HomeContainer({
 
       <div className={styles.rightSectionWrapper}>
         <div className={styles.imgWrapper}>
-          <Image layout='fixed' width={441} height={556} src={imgSrc} alt='person' />
+          <Image layout='fixed' width={411} height={556} src={imgSrc} alt='person' />
           <div className={styles.hook}/>
         </div>
         
